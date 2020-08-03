@@ -1,0 +1,26 @@
+@import url(./__like/card__like.css);
+@import url(./__image/card__image.css);
+@import url(./__title/card__title.css);
+@import url(./__delete/card__delete.css);
+@import url(./__container/card__container.css);
+@import url(./__like/_mode/card__like_mode_active.css);
+@import url(./__like-count/card__like-count.css);
+
+.card {
+  background-color: #fff;
+  color: #000;
+  position: relative;
+  border-radius: 10px;
+  border-color: black;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all linear .2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:hover .card__delete{
+  opacity: 1;
+}

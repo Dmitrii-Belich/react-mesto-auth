@@ -1,0 +1,6 @@
+@import url(./_place/profile__inner-wrapper_place_name.css);
+@import url(./_place/profile__inner-wrapper_place_profile.css);
+
+.profile__inner-wrapper {
+  display: flex;
+}

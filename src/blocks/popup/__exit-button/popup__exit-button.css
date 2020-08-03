@@ -1,0 +1,29 @@
+.popup__exit-button {
+  position: absolute;
+  width: 40.7px;
+  height: 40.7px;
+  top: -39px;
+  right: -37px;
+  z-index: 1;
+  background: url("data:image/svg+xml,%3Csvg width='22' height='22' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='402' width='582' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath transform='rotate(46 10.999999999999998,11.000000000000002) ' id='svg_1' fill='%23fff' d='m22,9.778l-9.778,0l0,-9.778l-2.444,0l0,9.778l-9.778,0l0,2.444l9.778,0l0,9.778l2.444,0l0,-9.778l9.778,0l0,-2.444z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center/40.7px 40.7px rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  transition: all linear .1s;
+  cursor: pointer;
+}
+
+.popup__exit-button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 510px) {
+  .popup__exit-button {
+    width: 20px;
+    height: 20px;
+    top: -21px;
+    right: -21px;
+    background-size: 20px 20px;
+  }
+}

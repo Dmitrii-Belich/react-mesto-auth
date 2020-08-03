@@ -1,0 +1,26 @@
+.profile__add-button {
+  padding: 0;
+  width: 150px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background: url("data:image/svg+xml,%3Csvg width='22' height='22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 9.778h-9.778V0H9.778v9.778H0v2.444h9.778V22h2.444v-9.778H22V9.778z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center/22px 22px black;
+  margin: 4% 0 0;
+  outline: none;
+  transition: all linear .1s;
+  cursor: pointer;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 619px) {
+  .profile__add-button {
+    margin: 22px 0 0;
+    width: 282px;
+    height: 50px;
+    background-size: 16px 16px;
+  }
+}
