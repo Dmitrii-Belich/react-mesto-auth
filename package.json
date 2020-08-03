@@ -1,6 +1,6 @@
 {
-  "homepage": "http://dmitrii-belich.github.io/mesto",
-  "name": "mesto",
+  "homepage": "http://dmitrii-belich.github.io/mesto-react/",
+  "name": "mesto-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

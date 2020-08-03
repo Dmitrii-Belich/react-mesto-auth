@@ -1,4 +1,4 @@
-# [Проект "Mesto" на React.js](https://dmitrii-belich.github.io/mesto/)
+# [Проект "Mesto" на React.js](https://dmitrii-belich.github.io/mesto-react/)
 
 ## Описание:
 Мною было выполнено 4 версии проектной работы(ветка forVersions):
