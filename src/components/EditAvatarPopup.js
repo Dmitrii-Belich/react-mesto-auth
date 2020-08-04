@@ -7,7 +7,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const [buttonText, setButtonText] = React.useState("Сохранить");
   const [validity, setValidity] = React.useState(false);
   const [url, setUrl] = React.useState("");
-  //  const inputRef = React.useRef() если использовать ref
 
   const inputHandler = (value, name, validity) => {
     setUrl(value);
@@ -17,7 +16,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     setButtonText("Сохранение...");
-    // onUpdateAvatar(inputRef.current.value) если использовать ref
     onUpdateAvatar(url)
       .then(() => {
         clearInput();
@@ -48,7 +46,6 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       isFormValid={validity}
     >
       <Input
-        //     ref={inputRef} если использовать ref, и использовать обычный input
         type="url"
         className="popup__input"
         pattern=".+\.(jpg|png)"

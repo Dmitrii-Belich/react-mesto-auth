@@ -77,7 +77,6 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       <Input
         type="url"
         className="popup__input"
-        pattern=".+\.(jpg|png)"
         name="url"
         required
         placeholder="Ссылка на картинку"

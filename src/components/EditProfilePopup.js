@@ -15,8 +15,10 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   const [description, setDescription] = React.useState(currentUser.about);
 
   React.useEffect(() => {
-    setName(currentUser.name);
-    setDescription(currentUser.about);
+    if (currentUser) {
+      setName(currentUser.name);
+      setDescription(currentUser.about);
+    }
   }, [currentUser, isOpen]);
 
   const inputChangers = {
@@ -58,7 +60,7 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       return summ && currentItem;
     });
   };
-  
+
   return (
     <PopupWithForm
       isOpen={isOpen}
