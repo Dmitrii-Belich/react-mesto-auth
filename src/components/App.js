@@ -23,6 +23,11 @@ export default function App() {
   const [cards, setCards] = React.useState([]);
 
   const errShow = (err) => console.log(err);
+  const escHandler = (evt) => {
+    if (evt.key === "Escape") {
+      closeAllPopups()
+    }
+  }
 
   React.useEffect(() => {
     Promise.all([api.getUserInformation(), api.getInitialCards()])
@@ -50,6 +55,7 @@ export default function App() {
   const handleCardDelete = (id) => {
     setSelectedCard({ id });
     setDeletePopupState(true);
+    document.addEventListener("keydown", escHandler)
   };
 
   const closeAllPopups = () => {
@@ -59,23 +65,28 @@ export default function App() {
     setDeletePopupState(false);
     setImgPopupState(false);
     setSelectedCard({});
+    document.removeEventListener("keydown", escHandler)
   };
 
   const isEditProfilePopupOpen = () => {
     setEditPopupState(true);
+    document.addEventListener("keydown", escHandler)
   };
 
   const isAddPlacePopupOpen = () => {
     setAddPopupState(true);
+    document.addEventListener("keydown", escHandler)
   };
 
   const isEditAvatarPopupOpen = () => {
     setAvatarPopupState(true);
+    document.addEventListener("keydown", escHandler)
   };
 
   const handleCardClick = (card) => {
     setImgPopupState(true);
     setSelectedCard(card);
+    document.addEventListener("keydown", escHandler)
   };
 
   const handleUpdateUser = async (object) => {
