@@ -12,7 +12,6 @@
 
 ## Технологии:
 * React
-* React Router
 * ООП
 * БЭМ
 * Webpack
