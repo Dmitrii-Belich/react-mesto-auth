@@ -1,0 +1,33 @@
+@import url(./__container/popup__container.css);
+@import url(./__input/popup__input.css);
+@import url(./__save/popup__save.css);
+@import url(./__title/popup__title.css);
+@import url(./__overlay/popup__overlay.css);
+@import url(./__exit-button/popup__exit-button.css);
+@import url(./__image/popup__image.css);
+@import url(./__image-container/popup__image-container.css);
+@import url(./__image-title/popup__image-title.css);
+@import url(./_target/popup_target_add.css);
+@import url(./_target/popup_target_edit.css);
+@import url(./_target/popup_target_img.css);
+@import url(./__input-error/popup__input-error.css);
+@import url(./__input-error/_display/popup__input-error_display_show.css);
+@import url(./__input/_display/popup__input_display_error.css);
+@import url(./__save/_display/popup__save_display_error.css);
+@import url(./__form-error/popup__form-error.css);
+@import url(./__form-error/_display/popup__form-error_display_visible.css);
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.2s, opacity 0.2s linear;
+}
