@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Input({
+  place = "popup",
   name,
   pattern,
   required,
@@ -30,9 +31,9 @@ export default function Input({
     <>
       <input
         type={type}
-        className={`popup__input ${
-          !isInputValid && "popup__input_display_error"
-        }`}
+        className={`${place}__input ${
+          !isInputValid && `${place}__input_display_error`
+        }`         }
         pattern={pattern}
         name={name}
         required={required}
@@ -42,7 +43,7 @@ export default function Input({
         maxLength={maxLength}
         minLength={minLength}
       />
-      <span className="popup__input-error">{validationMessage}</span>
+      <span className={`${place}__input-error`}>{validationMessage}</span>
     </>
   );
 }

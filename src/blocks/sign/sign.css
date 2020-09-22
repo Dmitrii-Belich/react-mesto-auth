@@ -1,0 +1,11 @@
+@import url(./__button/sign__button.css);
+@import url(./__input/sign__input.css);
+@import url(./__subtitle/sign__subtitle.css);
+@import url(./__title/sign__title.css);
+@import url(./__input/_display/sign__input_display_error.css);
+@import url(./__link/sign__link.css);
+
+.sign {
+    max-width: 358px;
+    margin: 60px auto 80px;
+}

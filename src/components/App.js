@@ -1,6 +1,7 @@
 import React from "react";
+import { BrowserRouter, Route, Switch, Redirect, withRouter } from 'react-router-dom';
 
-import { api } from "../utils/api";
+import { api } from "../utils/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 import Header from "./Header";
@@ -11,6 +12,9 @@ import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
 import DeleteCardPopup from "./DeleteCardPopup";
+import ProtectedRoute from "./ProtectedRoute";
+import Sign from "./Sign"
+
 
 export default function App() {
   const [editPopupState, setEditPopupState] = React.useState(false);
@@ -21,6 +25,7 @@ export default function App() {
   const [selectedCard, setSelectedCard] = React.useState({});
   const [currentUser, setCurrentUser] = React.useState({});
   const [cards, setCards] = React.useState([]);
+  const [loggedIn, setLoggedIn] = React.useState(false);
 
   const errShow = (err) => console.log(err);
   const escHandler = (evt) => {
@@ -136,7 +141,7 @@ export default function App() {
     }
     return Promise.reject();
   };
-  
+
   const handleDeleteSubmit = async () => {
     let isSucssesful = false;
     await api
@@ -155,43 +160,57 @@ export default function App() {
   };
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-      <Header />
-      <Main
-        onEditAvatar={isEditAvatarPopupOpen}
-        onEditProfile={isEditProfilePopupOpen}
-        onAddPlace={isAddPlacePopupOpen}
-        onCardClick={handleCardClick}
-        cards={cards}
-        onLike={handleCardLike}
-        onDelete={handleCardDelete}
-      />
-      <Footer />
-      <PopupWithImage
-        onClose={closeAllPopups}
-        card={selectedCard}
-        isOpen={imgPopupState}
-      />
-      <EditProfilePopup
-        isOpen={editPopupState}
-        onClose={closeAllPopups}
-        onUpdateUser={handleUpdateUser}
-      />
-      <EditAvatarPopup
-        isOpen={avatarPopupState}
-        onClose={closeAllPopups}
-        onUpdateAvatar={handleUpdateAvatar}
-      />
-      <AddPlacePopup
-        isOpen={addPopupState}
-        onClose={closeAllPopups}
-        onAddPlace={handleAddPlaceSubmit}
-      />
-      <DeleteCardPopup
-        isOpen={deletePopupState}
-        onClose={closeAllPopups}
-        onDelete={handleDeleteSubmit}
-      />
-    </CurrentUserContext.Provider>
+    <>
+      <BrowserRouter>
+        <CurrentUserContext.Provider value={currentUser}>
+          <Header />
+
+          <Switch>
+            <ProtectedRoute path="/sign-in" component={Sign} forRegistered loggedIn={loggedIn} type="in" />
+            <ProtectedRoute path="/sign-up" component={Sign} forRegistered loggedIn={loggedIn} type="up" />
+            <ProtectedRoute exact path="/" component={Main} loggedIn={loggedIn} onEditAvatar={isEditAvatarPopupOpen}
+              onEditProfile={isEditProfilePopupOpen}
+              onAddPlace={isAddPlacePopupOpen}
+              onCardClick={handleCardClick}
+              cards={cards}
+              onLike={handleCardLike}
+              onDelete={handleCardDelete}
+            />
+            <Route path="/">
+              {loggedIn ? <Redirect to="/" /> : <Redirect to="/sign-in" />}
+            </Route>
+
+          </Switch>
+
+          <Footer />
+          <PopupWithImage
+            onClose={closeAllPopups}
+            card={selectedCard}
+            isOpen={imgPopupState}
+          />
+          <EditProfilePopup
+            isOpen={editPopupState}
+            onClose={closeAllPopups}
+            onUpdateUser={handleUpdateUser}
+          />
+          <EditAvatarPopup
+            isOpen={avatarPopupState}
+            onClose={closeAllPopups}
+            onUpdateAvatar={handleUpdateAvatar}
+          />
+          <AddPlacePopup
+            isOpen={addPopupState}
+            onClose={closeAllPopups}
+            onAddPlace={handleAddPlaceSubmit}
+          />
+          <DeleteCardPopup
+            isOpen={deletePopupState}
+            onClose={closeAllPopups}
+            onDelete={handleDeleteSubmit}
+          />
+
+        </CurrentUserContext.Provider>
+      </BrowserRouter>
+    </>
   );
 }
