@@ -1,19 +1,21 @@
 .sign__button {
-    width: 100%;
-    padding: 13px 0;
-    margin: 186px 0 15px;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    font-size: 18px;
-line-height: 22px;
-transition: all ease .2s;
+  width: 100%;
+  padding: 13px 0;
+  margin: 188px 0 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 22px;
+  transition: all ease 0.2s;
+  background-color: #fff;
+  color: #000;
 }
 
-.sign__button:hover{
-    color: #ccc;
-    background-color: #000;
+.sign__button:hover {
+  color: #fff;
+  background-color: #000;
 }

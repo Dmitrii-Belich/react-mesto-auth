@@ -4,6 +4,8 @@
 @import url(./__title/sign__title.css);
 @import url(./__input/_display/sign__input_display_error.css);
 @import url(./__link/sign__link.css);
+@import url(./__button/_display/sign__button_display_error.css);
+@import url(./__input-error/sign__input-error.css);
 
 .sign {
     max-width: 358px;

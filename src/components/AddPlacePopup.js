@@ -4,8 +4,8 @@ import Input from "./ui/Input";
 import PopupWithForm from "./PopupWithForm";
 
 export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
-  const [validity, setValidity] = React.useState({ title: false, url: false });
   const [buttonText, setButtonText] = React.useState("Создать");
+  const [validity, setValidity] = React.useState({ title: false, url: false });
   const [title, setTitle] = React.useState("");
   const [url, setUrl] = React.useState("");
 
@@ -48,7 +48,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       return summ && currentItem;
     });
   };
-  
+
   return (
     <PopupWithForm
       isOpen={isOpen}

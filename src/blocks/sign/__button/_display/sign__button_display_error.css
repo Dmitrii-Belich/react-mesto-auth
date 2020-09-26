@@ -1,0 +1,10 @@
+.sign__button_display_error {
+    opacity: .3;
+    cursor: not-allowed;
+}
+
+.sign__button_display_error:hover {
+    color: #000;
+    background-color: #fff;
+  }
+  

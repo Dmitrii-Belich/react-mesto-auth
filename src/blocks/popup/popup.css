@@ -16,6 +16,9 @@
 @import url(./__save/_display/popup__save_display_error.css);
 @import url(./__form-error/popup__form-error.css);
 @import url(./__form-error/_display/popup__form-error_display_visible.css);
+@import url(./__tool-image/popup__tool-image.css);
+@import url(./__tool-title/popup__tool-title.css);
+
 
 .popup {
   position: fixed;
