@@ -12,9 +12,8 @@ export default function Main({
   onLike,
   onDelete,
 }) {
-
   const { name, about, avatar } = React.useContext(CurrentUserContext);
-  
+
   return (
     <main>
       <section className="profile">

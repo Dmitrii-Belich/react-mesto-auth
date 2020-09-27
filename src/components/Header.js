@@ -3,7 +3,7 @@ import { Link, Route } from "react-router-dom";
 
 import logo from "../images/logo.svg";
 
-export default function Header({email, onExit}) {
+export default function Header({ email, onExit }) {
   return (
     <header className="header">
       <div className="header__wrapper">

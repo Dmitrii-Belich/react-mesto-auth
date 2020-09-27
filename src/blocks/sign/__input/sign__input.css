@@ -1,18 +1,16 @@
 .sign__input {
-    width: 100%;
-    margin: 0 ;
-    padding: 0 0 9px;
-    border: none;
-    border-bottom: 2px solid #CCC;
-    background-color: #000;
-    font-size: 14px;
-line-height: 17px;
-color: #CCCCCC;
-outline: none;
-box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 9px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: #000;
+  font-size: 14px;
+  line-height: 17px;
+  color: #cccccc;
+  outline: none;
+  box-sizing: border-box;
 }
 .sign__input:focus {
-    border-bottom: 2px solid rgb(0, 255, 213);
-
+  border-bottom: 2px solid rgb(0, 255, 213);
 }
-

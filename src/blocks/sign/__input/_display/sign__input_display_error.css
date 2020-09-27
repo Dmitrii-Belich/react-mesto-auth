@@ -1,6 +1,6 @@
 .sign__input_display_error {
-    border-bottom: 2px solid rgb(255, 0, 0);
+  border-bottom: 2px solid rgb(255, 0, 0);
 }
 .sign__input_display_error:focus {
-    border-bottom: 2px solid rgb(255, 0, 0);
+  border-bottom: 2px solid rgb(255, 0, 0);
 }

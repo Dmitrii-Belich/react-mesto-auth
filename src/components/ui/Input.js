@@ -33,7 +33,7 @@ export default function Input({
         type={type}
         className={`${place}__input ${
           !isInputValid && `${place}__input_display_error`
-        }`         }
+        }`}
         pattern={pattern}
         name={name}
         required={required}

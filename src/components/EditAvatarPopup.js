@@ -31,7 +31,7 @@ export default function EditAvatarPopup({ isOpen, onClose, onUpdateAvatar }) {
       setButtonText("Сохранить");
     }, 200);
   };
-  
+
   return (
     <PopupWithForm
       isOpen={isOpen}

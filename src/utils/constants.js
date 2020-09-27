@@ -4,11 +4,11 @@ export const apiOptions = {
     authorization: "10d0cab2-3de3-42ea-80c8-2e15574d2bdb",
     "Content-Type": "application/json",
   },
-}
+};
 
 export const authOptions = {
   BASE_URL: "https://auth.nomoreparties.co",
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
-}
+};

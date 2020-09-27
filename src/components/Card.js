@@ -17,7 +17,7 @@ export default function Card({
   const isLiked = likes.some((item) => {
     return item._id === userId;
   });
-  
+
   return (
     <div className="card">
       <img

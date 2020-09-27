@@ -48,12 +48,12 @@ export default function Sign({ type, onSubmit }) {
       password,
       email,
     })
-       .then((check) => {
+      .then((check) => {
         if (!check) clearInput();
       })
       .catch(() => {
         setButtonText("Попробовать еще раз");
-      }); 
+      });
   };
   return (
     <main>
@@ -79,7 +79,7 @@ export default function Sign({ type, onSubmit }) {
           onChange={inputHandler}
           minLength="3"
           maxLength="20"
-           pattern="[\d\w]*" 
+          pattern="[\d\w]*"
           required
         />
         <button

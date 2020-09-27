@@ -11,13 +11,13 @@
 }
 
 .header::after {
-    content: " ";
-    display: block;
-    height: 0;
-    border: 1px solid #545454;
-    opacity: .7;
-    margin: 36px 0 0;
-    width: 100%;
+  content: " ";
+  display: block;
+  height: 0;
+  border: 1px solid #545454;
+  opacity: 0.7;
+  margin: 36px 0 0;
+  width: 100%;
 }
 
 @media screen and (max-width: 619px) {

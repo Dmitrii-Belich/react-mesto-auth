@@ -16,7 +16,7 @@ export default function EditAvatarPopup({ isOpen, onClose, onDelete }) {
         setButtonText("Ошибка");
       });
   };
-  
+
   return (
     <PopupWithForm
       isOpen={isOpen}

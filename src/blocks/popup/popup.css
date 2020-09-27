@@ -19,7 +19,6 @@
 @import url(./__tool-image/popup__tool-image.css);
 @import url(./__tool-title/popup__tool-title.css);
 
-
 .popup {
   position: fixed;
   width: 100%;
